@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <script src="script.js" defer></script>
+    <script>
+      if (
+        localStorage.getItem("color-theme") === "dark" ||
+        (!("color-theme" in localStorage) &&
+          window.watchMedia("(prefers-color-scheme:dark)").watches)
+      ) {
+        document.documentElement.classList.add("darl");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
+    <title>CamiContreras Portfolio+Tailwind 🚀</title>
+  </head>
+  <body
+    class="bg-sky-50 text-stone-900 dark:bg-primary dark:text-cyan-50 font-comic"
+  >
+    <header>
+      <nav
+        class="flex justify-between py-10 m-auto px-5 text-lg font-medium tracking-widest md:items-center"
+      >
+        <a href=""><i class="bi bi-rocket"></i> </a>
+        <div
+          id="menu"
+          class="bg-white dark:bg-slate-800 p-7 h-[380px] w-[320px] md:flex flex-col items-start justify-around rounded-lg text-dark dark:text-white md:flex-row md:w-full md:py-0 md:h-[50px] md:bg-inherit md:dark:bg-primary hidden"
+        >
+          <ul
+            class="flex h-5/6 flex-col justify-around md:flex-row md:justify-center w-full"
+          >
+            <li class="md:px-5 hover:text-sky-600">
+              <a href="#about-me">¿Who I am?</a>
+            </li>
+            <li class="md:px-5 hover:text-sky-600">
+              <a href="#courses-technologies">Technologies</a>
+            </li>
+            <li class="md:px-5 hover:text-sky-600"><a href="#projects">Projects</a></li>
+            <li class="md:px-5 hover:text-sky-600">
+              <a href="#contact-me">Contact Me</a>
+            </li>
+          </ul>
+          <!--button dark mode-->
+          <button id="darkButton">
+            <i class="bi bi-moon-stars-fill text-sky-600 text-2xl"></i>
+          </button>
+        </div>
+        <!--button burguer menu-->
+        <button id="menu-button" class="absolute top-10 right-12 md:hidden">
+          <span
+            class="br-1 block bg-black dark:bg-white my-2 rounded-md h-[3px] w-[28px]"
+          ></span>
+          <span
+            class="br-2 block bg-black dark:bg-white my-2 rounded-md h-[3px] w-[28px]"
+          ></span>
+          <span
+            class="br-3 block bg-black dark:bg-white my-2 rounded-md h-[3px] w-[28px]"
+          ></span>
+        </button>
+      </nav>
+    </header>
+    <main>
+      <section class="m-0 flex flex-col lg:flex-row lg:h-[750px] lg:p-0 lg:m-0" id="about-me">
+        <div class="p-10 lg:w-[80%] lg:h-[500px] lg:self-start">
+          <h1
+            class="text-sky-600 dark:text-sky-300 text-2xl font-bold tracking-widest leading-10"
+          >
+            ¡Hello! I'm
+          </h1>
+          <p class="py-2 text-3xl font-bold text-slate-600 dark:text-slate-300">
+            Camila Contreras
+          </p>
+          <p class="text-3xl font-bold text-slate-500 dark:text-slate-600">
+            Systems Analist and FullStack Developer Tr. 🚀
+          </p>
+          <p class="mt-5 text-lg">
+            I consider myself a super curious person always looking for
+            something new to learn and courses/training to do. I characterize
+            myself by my responsibility, organization, neatness and dedication.
+          </p>
+          <div class="py-6">
+            <a href="https://github.com/CamiContreras13/" target='_blank' class="pr-2 text-2xl hover:text-sky-600 px-2"
+              ><i class="bi bi-github"></i
+            ></a>
+            <a href="https://www.linkedin.com/in/camilacontreras13/" target="_blank" class="pr-2 text-2xl hover:text-sky-600 px-2"
+              ><i class="bi bi-linkedin"></i
+            ></a>
+            <a href="https://www.threads.net/@camicontreras13" target="_blank" class="pr-2 text-2xl hover:text-sky-600 px-2"
+              ><i class="bi bi-pencil"></i
+            ></a>
+            <a href="https://www.instagram.com/camicontreras13/" target="_blank" class="pr-2 text-2xl hover:text-sky-600 px-2"
+              ><i class="bi bi-instagram"></i
+            ></a>
+          </div>
+          <div>
+            <a href="#contact-me">
+              <button
+                class="border-2 rounded border-sky-500 p-4 w-[250px] text-lg tracking-widest hover:bg-sky-500 hover:dark:text-slate-900 ease-out duration-300"
+              >
+                Contact Me !
+              </button>
+          </a>
+          </div>
+        </div>
+        <div class="my-5 w-full">
+          <div
+            class="w-[300px] h-[320px] m-auto bg-[url('./img/profile-modified.png')] lg:bg-[url('./img/profile-modified.png')] bg-cover rounded-lg lg:w-[80%] lg:h-[70%] lg:bg-center lg:bg-no-repeat lg:bg-[length: 617px:840px]"
+          ></div>
+        </div>
+      </section>
+      <h2
+        class="text-3xl text-slate-700 dark:text-white font-bold tracking-widest w-[85%] m-auto text-center pt-8" id='courses-technologies'
+      >
+        Technologies
+      </h2>
+      <section
+        class="my-12 flex flex-col w-[84%] m-auto lg:flex-row lg:w-[87%] lg:my-28"
+        id="jobSection"
+      >
+        <div class="flex justify-between lg:flex-col lg:w-[20%]">
+          <button
+            type="button"
+            id="link1"
+            data-id="job1"
+            class="border-b-2 hover:dark:bg-slate-700 w-full px-4 py-1 hover:bg-white focus:bg-white focus:border-sky-500 focus:dark:bg-slate-700 lg:border-l-2 lg:border-b-0 lg:h-full lg:text-left border-sky-500 bg-white dark:bg-slate-700"
+          >
+            FrontEnd
+          </button>
+          <button
+            type="button"
+            data-id="job2"
+            class="border-b-2 hover:dark:bg-slate-700 w-full px-4 py-1 hover:bg-white focus:bg-white focus:border-sky-500 focus:dark:bg-slate-700 lg:border-l-2 lg:border-b-0 lg:h-full lg:text-left"
+          >
+            BackEnd
+          </button>
+          <button
+            type="button"
+            data-id="job3"
+            class="border-b-2 hover:dark:bg-slate-700 w-full px-4 py-1 hover:bg-white focus:bg-white focus:border-sky-500 focus:dark:bg-slate-700 lg:border-l-2 lg:border-b-0 lg:h-full lg:text-left"
+          >
+            DataBase
+          </button>
+          <button
+            type="button"
+            data-id="job4"
+            class="border-b-2 hover:dark:bg-slate-700 w-full px-4 py-1 hover:bg-white focus:bg-white focus:border-sky-500 focus:dark:bg-slate-700 lg:border-l-2 lg:border-b-0 lg:h-full lg:text-left"
+          >
+            IT
+          </button>
+        </div>
+
+        <!-- Container Technologies Description -->
+        <div class="my-5 lg:px-10 lg:my-0 lg:max-w-[800px]">
+          <!-- 1-->
+
+          <article id="job1">
+            <h3 class="text-2xl text-sky-500 font-bold">
+              FrontEnd Developer
+            </h3>
+            <ul>
+              <li class="flex items-center py-2">
+                <span class="pr-2 text-sky-500 font-black">&#9655;</span>
+                <p class="text-stone-900 dark:text-cyan-50 font-normal px-5">
+                  Management of basic web development technologies, HTML, CSS (with FlexBox and Grid), JavaScript.
+                </p>
+              </li>
+              <li class="flex items-center py-2">
+                <span class="pr-2 text-sky-500 font-black">&#9655;</span>
+                <p class="text-stone-900 dark:text-cyan-50 font-normal px-5">
+                  Use of frameworks such as Bootstrap, TailwindCss and SASS preprocessor to optimize and design web pages.
+                </p>
+              </li>
+              <li class="flex items-center py-2">
+                <span class="pr-2 text-sky-500 font-black">&#9655;</span>
+                <p class="text-stone-900 dark:text-cyan-50 font-normal px-5">
+                  Libraries like React and frameworks like Angular with TypeScript.
+                </p>
+              </li>
+            </ul>
+          </article>
+
+          <!-- 2-->
+
+          <article id="job2" class="hidden">
+            <h3 class="text-2xl text-sky-500 font-bold">
+              BackEnd Developer
+            </h3>
+            <ul>
+              <li class="flex items-center py-2">
+                <span class="pr-2 text-sky-500 font-black">&#9655;</span>
+                <p class="text-stone-900 dark:text-cyan-50 font-normal px-5">
+                  Management of NodeJs for the creation of servers and APIs and HTTP requests.
+                </p>
+              </li>
+              <li class="flex items-center py-2">
+                <span class="pr-2 text-sky-500 font-black">&#9655;</span>
+                <p class="text-stone-900 dark:text-cyan-50 font-normal px-5">
+                  Use of the ExpressJs framework for the development of web applications and APIs in conjunction with NodeJs.
+                </p>
+              </li>
+              <li class="flex items-center py-2">
+                <span class="pr-2 text-sky-500 font-black">&#9655;</span>
+                <p class="text-stone-900 dark:text-cyan-50 font-normal px-5">
+                  Use of Postman and Insomnia to test requests in APIs.
+                </p>
+              </li>
+            </ul>
+          </article>
+          <!-- 3 -->
+          <article id="job3" class="hidden">
+            <h3 class="text-2xl text-sky-500 font-bold">
+              DataBase Administrator
+            </h3>
+            <ul>
+              <li class="flex items-center py-2">
+                <span class="pr-2 text-sky-500 font-black">&#9655;</span>
+                <p class="text-stone-900 dark:text-cyan-50 font-normal px-5">
+                  Management of relational databases like MySql with ORM like Prisma.
+                </p>
+              </li>
+              <li class="flex items-center py-2">
+                <span class="pr-2 text-sky-500 font-black">&#9655;</span>
+                <p class="text-stone-900 dark:text-cyan-50 font-normal px-5">
+                  Management of non-relational databases such as MongoDB and Firebase.
+                </p>
+              </li>
+              <li class="flex items-center py-2">
+                <span class="pr-2 text-sky-500 font-black">&#9655;</span>
+                <p class="text-stone-900 dark:text-cyan-50 font-normal px-5">
+                  Authentications with JWT and Auth0 to complement.
+                </p>
+              </li>
+            </ul>
+          </article>
+          <!-- 4-->
+          <article id="job4" class="hidden">
+            <h3 class="text-2xl text-sky-500 font-bold">
+              Systems Analist
+            </h3>
+            <ul>
+              <li class="flex items-center py-2">
+                <span class="pr-2 text-sky-500 font-black">&#9655;</span>
+                <p class="text-stone-900 dark:text-cyan-50 font-normal px-5">
+                  As a Systems Analyst, I design and develop solutions to customer problems. Among them, data flow diagram and UML, prototypes, case studies, database normalization and custom systems.
+                </p>
+              </li>
+              <li class="flex items-center py-2">
+                <span class="pr-2 text-sky-500 font-black">&#9655;</span>
+                <p class="text-stone-900 dark:text-cyan-50 font-normal px-5">
+                  SCRUM methodologies and project management and control.
+                </p>
+              </li>
+              <li class="flex items-center py-2">
+                <span class="pr-2 text-sky-500 font-black">&#9655;</span>
+                <p class="text-stone-900 dark:text-cyan-50 font-normal px-5">
+                  Managing version control with Git and repositories with GitHub.
+                </p>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+      <!--Projects Section-->
+      <h3
+        class="text-3xl text-slate-700 dark:text-white my-5 px-12 font-bold tracking-widest md:text-center"  id='projects'
+      >
+        My latest Projects
+      </h3>
+      <section
+        class="my-12 flex flex-col items-center justify-center w-[90%] m-auto lg:flex-row"
+      >
+        <div class="border-1 rounded-lg bg-white dark:bg-slate-800 m-5">
+          <div class="m-2">
+            <img src="./img/weather-app.png" alt="" class="opacity-80 hover:opacity-100"/>
+            <h4 class="font-bold my-2">Weather App</h4>
+            <article class="flex justify-between">
+              <div class="flex flex-nowrap items-center">
+                <span  class="bg-slate-200 rounded-lg px-2 mr-2 text-slate-700">HTML</span>
+                <span class="bg-slate-200 rounded-lg px-2 mr-2 text-slate-700">CSS</span>
+                <span class="bg-slate-200 rounded-lg px-2 mr-2 text-slate-700">JavaScript</span>
+              </div>
+              <div class="text-xl text-slate-600 dark:text-slate-200 pr-2 flex flex-nowrap">
+                <a href=""><i class="bi bi-github px-2 hover:text-sky-600"></i></a>
+                <a href=""><i class="bi bi-eye px-2 hover:text-sky-600"></i></a>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="border-1 rounded-lg bg-white dark:bg-slate-800 m-5">
+          <div class="m-2">
+            <img src="./img/calculator-app.png" alt="" class="opacity-80 hover:opacity-100"/>
+            <h4 class="font-bold my-2">Calculator App</h4>
+            <article class="flex justify-between">
+              <div class="flex flex-nowrap items-center">
+                <span  class="bg-slate-200 rounded-lg px-2 mr-2 text-slate-700">HTML</span>
+                <span class="bg-slate-200 rounded-lg px-2 mr-2 text-slate-700">CSS</span>
+                <span class="bg-slate-200 rounded-lg px-2 mr-2 text-slate-700">JavaScript</span>
+              </div>
+              <div class="text-xl text-slate-600 dark:text-slate-200 pr-2 flex flex-nowrap">
+                <a href=""><i class="bi bi-github px-2 hover:text-sky-600"></i></a>
+                <a href=""><i class="bi bi-eye px-2 hover:text-sky-600"></i></a>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="border-1 rounded-lg bg-white dark:bg-slate-800 m-5">
+          <div class="m-2">
+            <img src="./img/todo-list.png" alt="" class="opacity-80 hover:opacity-100"/>
+            <h4 class="font-bold my-2">ToDo List</h4>
+            <article class="flex justify-between">
+              <div class="flex flex-nowrap items-center">
+                <span  class="bg-slate-200 rounded-lg px-2 mr-2 text-slate-700">HTML</span>
+                <span class="bg-slate-200 rounded-lg px-2 mr-2 text-slate-700">CSS</span>
+                <span class="bg-slate-200 rounded-lg px-2 mr-2 text-slate-700">JavaScript</span>
+              </div>
+              <div class="text-xl text-slate-600 dark:text-slate-200 pr-2 flex flex-nowrap">
+                <a href=""><i class="bi bi-github px-2 hover:text-sky-600"></i></a>
+                <a href=""><i class="bi bi-eye px-2 hover:text-sky-600"></i></a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <h3 class="text-3xl text-slate-700 dark:text-white mt-12 mb-10 px-10 font-bold tracking-widest text-center" id='contact-me'>Contact Me</h3>
+      <section class="flex flex-col w-[90%] m-auto" >
+        <form action="" class="w-[90%] md:max-w-[600px] m-auto">
+          <div>
+            <input placeholder="info@ejemplo.com" type="email" name="email" id="email" class="p-3 w-full rounded-lg focus:outline-none focus:ring focus:ring-blue-400">
+          </div>
+          <div class="py-3">
+            <input placeholder="Name" type="text" name="name" id="name" class="p-3 w-full rounded-lg focus:outline-none focus:ring focus:ring-blue-400">
+          </div>
+          <div>
+            <textarea placeholder="Message" name="msj" id="msj" cols="10" rows="5" class="p-3 w-full rounded-lg focus:outline-none focus:ring focus:ring-blue-400"></textarea>
+          </div>
+          <div class="my-3">
+            <button class="bg-sky-600 text-white p-3 w-full rounded-lg text-lg tracking-widest">Send Message</button>
+          </div>
+        </form>
+      </section>
+      <footer class="text-center mt-12 mb-5">
+        <p class="hover:text-sky-500">Designed &#38; Developed by Camila Contreras</p>
+        <div>
+          <a href=""><i class="bi bi-linkedin hover:text-sky-500 px-2"></i></a>
+          <a href=""><i class="bi bi-github hover:text-sky-500 px-2"></i></a>
+          <a href=""><i class="bi bi-pencil hover:text-sky-500 px-2"></i></a>
+          <a href=""><i class="bi bi-instagram hover:text-sky-500 px-2"></i></a>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
